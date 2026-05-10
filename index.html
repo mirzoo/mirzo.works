@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,69 +13,41 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1 class="header__name">Мирзомансур Охунов</h1>
-            <p class="header__date">Обновлено 29 Янв 2026</p>
-        </header>
-
-        <!-- About Text -->
-        <section class="about-text">
-            <p class="about-text__description">
-                Я продуктовый дизайнер из&#160;Таджикистана. Уже&#160;4&#160;года проектирую и&#160;прототипирую цифровые продукты. В&#160;свободное время изучаю ИИ инструменты и&#160;экспериментирую с&#160;вайбкодингом.
-            </p>
-        </section>
-
-        <!-- Main Video -->
-        <section class="main-video">
-            <video src="assets/drink-tea.mp4" class="main-video__image" autoplay loop muted playsinline></video>
-        </section>
-
-        <!-- About Experience -->
-        <section class="about-experience">
-            <p class="about-experience__text">
-                Сейчас работаю в&#160;Т–Банке и отвечаю за&#160;клиентский опыт в&#160;кредитных продуктах.
-            </p>
-            <p class="about-experience__text">
-                Вы можете написать мне в&#160;тг <a href="https://t.me/mirzozm" class="link">@mirzozm ↗</a> или на&#160;почту <a href="mailto:mirzo.okhunov@gmail.com" class="link">mirzo.okhunov@gmail.com ↗</a>
-            </p>
-        </section>
-
-        <!-- Work History -->
-        <section class="work-history">
-            <div class="work-history__cell">
-                <a href="https://www.tbank.ru/" class="work-history__link" target="_blank" rel="noopener noreferrer">
-                    <span class="work-history__year">2024</span>
-                    <span class="work-history__company">Т–Банк</span>
-                    <span class="work-history__position">→</span>
-                </a>
-            </div>
-            <div class="work-history__cell">
-                <a href="https://bft.ru/" class="work-history__link" target="_blank" rel="noopener noreferrer">
-                    <span class="work-history__year">2024</span>
-                    <span class="work-history__company">БФТ Холдинг</span>
-                    <span class="work-history__position">→</span>
-                </a>
-            </div>
-            <div class="work-history__cell">
-                <a href="https://profinansy.ru/welcome" class="work-history__link" target="_blank" rel="noopener noreferrer">
-                    <span class="work-history__year">2022</span>
-                    <span class="work-history__company">pro.finansy</span>
-                    <span class="work-history__position">→</span>
-                </a>
-            </div>
-            <div class="work-history__cell">
-                <a href="https://zm.team/" class="work-history__link" target="_blank" rel="noopener noreferrer">
-                    <span class="work-history__year">2021</span>
-                    <span class="work-history__company">ZM Team</span>
-                    <span class="work-history__position">→</span>
-                </a>
+        <section class="intro">
+            <header class="intro__header">
+                <h1>Mirzomansur Okhunov</h1>
+                <p>Product Designer</p>
+            </header>
+            <div class="intro__body">
+                <p>
+                    I like imagining and building digital products that feel alive — with a clear idea, strong visuals, and thoughtful details.
+                </p>
+                <p>
+                    I use AI tools, vibe coding, motion, and interactive prototypes to explore ideas faster and turn them into clear product experiences.
+                </p>
+                <div class="main-video">
+                    <video src="assets/drink-tea.mp4" class="main-video__image" autoplay loop muted playsinline></video>
+                </div>
+                <p>
+                    Currently working at <a href="https://www.tbank.ru/" class="link" target="_blank" rel="noopener noreferrer">T–Bank</a>, where I design customer experiences for credit products.
+                </p>
+                <p>
+                    You can find me on <a href="https://x.com/mirzookhnv" class="link" target="_blank" rel="noopener noreferrer">X ↗</a>, <a href="https://t.me/mirzozm" class="link" target="_blank" rel="noopener noreferrer">Telegram ↗</a>, or reach me via <a href="mailto:mirzo.okhunov@gmail.com" class="link">email ↗</a>.
+                </p>
             </div>
         </section>
 
-        <!-- Work List -->
         <section class="work-list">
-            <!-- Case 1 -->
+            <div class="work-list-block">
+                <section class="phone-showcase phone-showcase--full-video" data-ready="false">
+                    <div class="phone-showcase__media-frame">
+                        <video src="assets/telegram-hidechat.mp4" class="phone-showcase__video phone-showcase__video--full" preload="metadata" autoplay loop muted playsinline webkit-playsinline aria-label="Hide Chats concept for Telegram"></video>
+                    </div>
+                </section>
+                <p>Hide Chats <span>• Telegram</span></p>
+                <p>A small concept for Telegram: what if chats could be hidden behind a password?</p>
+            </div>
+
             <div class="work-list-block">
                 <section class="phone-showcase">
                     <div class="phone-showcase__content">
@@ -85,7 +57,7 @@
                                 <div class="phone-showcase__phone-content phone-showcase__phone-content--video" data-ready="false">
                                     <div class="phone-showcase__player">
                                         <div class="phone-showcase__player-inner">
-                                            <video src="assets/rating.mp4" class="phone-showcase__video" preload="metadata" autoplay loop muted playsinline webkit-playsinline></video>
+                                            <video src="assets/rating.mp4" poster="assets/CreditHistory.png" class="phone-showcase__video" preload="metadata" autoplay loop muted playsinline webkit-playsinline></video>
                                         </div>
                                     </div>
                                 </div>
@@ -93,26 +65,20 @@
                         </div>
                     </div>
                 </section>
-                <div class="work-list-block__info">
-                    <h2 class="work-list-block__header">Кредитная история <span class="work-list-block__company">• Т–Банк</span></h2>
-                    <p class="work-list-block__description">
-                        В&#160;Т–Банке я переработал раздел кредитного рейтинга: выделил ключевые проблемы в&#160;текущем опыте, предложил новую концепцию, согласовал её со&#160;стейкхолдерами и передал дизайн в&#160;разработку.
-                    </p>
-                    <p class="work-list-block__status">Кейс оформляется</p>
-                </div>
+                <p>Credit History <span>• T–Bank</span></p>
+                <p>At T-Bank, I redesigned the credit score section — from problem analysis and concept development to design approval and handoff.</p>
             </div>
 
-            <!-- Case 2 -->
             <div class="work-list-block">
                 <section class="phone-showcase">
                     <div class="phone-showcase__content">
                         <div class="phone-showcase__phone-container">
                             <div class="phone-showcase__phone">
-                                <img src="assets/WinlineConcept.png" alt="Концепт страницы прематча Winline" class="phone-showcase__frame-img" width="227.5" height="450">
+                                <img src="assets/phoneMockup.png" alt="" class="phone-showcase__frame-img" width="227.5" height="450" aria-hidden="true">
                                 <div class="phone-showcase__phone-content">
                                     <div class="phone-showcase__player">
                                         <div class="phone-showcase__player-inner">
-                                            <img src="assets/content-2.png" alt="Концепт страницы прематча - Winline" class="phone-showcase__video">
+                                            <img src="assets/WinlineConcept.png" alt="Pre-match page concept for Winline" class="phone-showcase__video">
                                         </div>
                                     </div>
                                 </div>
@@ -120,55 +86,40 @@
                         </div>
                     </div>
                 </section>
-                <div class="work-list-block__info">
-                    <h2 class="work-list-block__header">Концепт страницы прематча <span class="work-list-block__company">• Winline</span></h2>
-                    <p class="work-list-block__description">
-                        В&#160;рамках тестового задания для&#160;Winline я спроектировал концепт прематча для&#160;киберспорта: помог пользователям быстрее находить матчи, сравнивать коэффициенты и делать ставки на&#160;предстоящие события.
-                    </p>
-                    <a href="#" class="work-list-block__link">Прочитать кейс ↗</a>
-                </div>
+                <p>Pre-match page concept <span>• Winline</span></p>
+                <p>For a Winline test assignment, I designed a pre-match esports concept — helping users find upcoming matches faster, compare odds more easily, and place bets with less friction.</p>
+                <a href="#" class="work-list-block__link">Read case study ↗</a>
             </div>
 
-            <!-- Case 3 -->
             <div class="work-list-block">
                 <section class="phone-showcase phone-showcase--lottie">
                     <div class="phone-showcase__media-frame">
-                        <div class="phone-showcase__lottie" id="lottie-case3" aria-label="Дизайн система pro.finansy"></div>
+                        <div class="phone-showcase__lottie" id="lottie-design-system" aria-label="Design system animation for pro.finansy"></div>
                     </div>
                 </section>
-                <div class="work-list-block__info">
-                    <h2 class="work-list-block__header">Дизайн система <span class="work-list-block__company">• pro.finansy</span></h2>
-                    <p class="work-list-block__description">
-                        В&#160;pro.finansy я дал старт дизайн системе и разработал ui-кит, чтобы синхронизировать работу дизайнеров и разработчиков и сделать продукт визуально и поведенчески консистентным во&#160;всех разделах.
-                    </p>
-                    <a href="#" class="work-list-block__link">Прочитать кейс ↗</a>
-                </div>
+                <p>Design system <span>• pro.finansy</span></p>
+                <p>At pro.finansy, I initiated the design system and built a UI kit that aligned design and development, helping maintain a consistent visual and behavioral experience across the product.</p>
+                <a href="#" class="work-list-block__link">Read case study ↗</a>
             </div>
 
-            <!-- Case 4 -->
             <div class="work-list-block">
                 <section class="phone-showcase phone-showcase--full-video" data-ready="false">
                     <div class="phone-showcase__media-frame">
-                        <video src="assets/Render.mp4" class="phone-showcase__video phone-showcase__video--full" preload="metadata" autoplay loop muted playsinline webkit-playsinline aria-label="Видео концепта фитнес приложения DDX Fitnes"></video>
+                        <video src="assets/Render.mp4" poster="assets/FitnessDDX.png" class="phone-showcase__video phone-showcase__video--full" preload="metadata" autoplay loop muted playsinline webkit-playsinline aria-label="Видео концепта фитнес приложения DDX Fitnes"></video>
                     </div>
                 </section>
-                <div class="work-list-block__info">
-                    <h2 class="work-list-block__header">Концепт фитнес приложения <span class="work-list-block__company">• DDX Fitnes</span></h2>
-                    <p class="work-list-block__description">
-                        В&#160;тестовом задании для&#160;DDX Fitnes я спроектировал основной пользовательский сценарий: флоу подбора тренера, запись к&#160;тренеру и экран тренера с&#160;ключевыми данными.
-                    </p>
-                    <a href="#" class="work-list-block__link">Прочитать кейс ↗</a>
-                </div>
+                <p>The concept of choosing a coach <span>• DDX Fitnes</span></p>
+                <p>For DDX Fitness, I designed a more visual and engaging trainer selection flow to keep users involved and help them complete the booking without dropping off.</p>
+                <a href="#" class="work-list-block__link">Read case study ↗</a>
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="footer">
             <p class="footer__subtext">Навайбокожено by Mirzo</p>
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
     <script src="js/phone-showcase.js"></script>
-    <script src="js/lottie-case3.js"></script>
+    <script src="js/lottie-design-system.js"></script>
 </body>
 </html>

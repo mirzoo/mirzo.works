@@ -1,9 +1,6 @@
-/**
- * Инициализация Lottie-анимации в Case 3 (Дизайн система • pro.finansy).
- * Требует подключённую библиотеку lottie (bodymovin).
- */
 document.addEventListener('DOMContentLoaded', function () {
-    var container = document.getElementById('lottie-case3');
+    var container = document.getElementById('lottie-design-system');
+
     if (container && typeof lottie !== 'undefined') {
         lottie.loadAnimation({
             container: container,

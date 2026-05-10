@@ -1,15 +1,9 @@
-/* CSS Variables — тема, цвета, отступы для переиспользования */
 :root {
-    /* Background Colors */
     --bg-body: #FDFDFC;
     --bg-showcase: #FCFCFC;
-
-    /* Stroke Colors */
     --stroke-showcase: #F2F2F2;
-
-    /* Text Colors */
     --text-primary: #111111;
-    --text-secondary: rgba(0, 0, 0, 0.4);
+    --text-secondary: rgba(17, 17, 17, 0.4);
     --text-hyperlink: #3E9FFF;
     --text-hyperlink-hover: #006FDD;
 }
