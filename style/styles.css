@@ -25,6 +25,134 @@ body {
     }
 }
 
+.intro__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+}
+
+.intro__avatar {
+    display: block;
+    flex: 0 0 120px;
+    width: 108px;
+    height: 120px;
+    transform: rotate(var(--head-tilt, 0deg));
+    transform-origin: 50% 75%;
+}
+
+.intro__avatar-button {
+    display: block;
+    flex: 0 0 120px;
+    width: 108px;
+    height: 120px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 160ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.intro__avatar-button:active {
+    transform: scale(0.96);
+}
+
+.intro__avatar-button:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 6px;
+}
+
+.intro__avatar-button.is-pointer-focused:focus {
+    outline: none;
+}
+
+.intro__avatar #eye-left,
+.intro__avatar #eye-right,
+.intro__avatar #brow-left,
+.intro__avatar #brow-right,
+.intro__avatar #mouth {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 280ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.intro__avatar.is-curious #brow-right {
+    transform: translateY(-2.7px) rotate(-6deg);
+}
+
+.intro__avatar[data-emotion="smile"] #eye-left,
+.intro__avatar[data-emotion="smile"] #eye-right {
+    transform: translateY(-1px) scaleY(0.5);
+}
+
+.intro__avatar[data-emotion="smile"] #mouth {
+    transform: scale(1.22, 1.35);
+}
+
+.intro__avatar[data-emotion="smile"] #brow-left,
+.intro__avatar[data-emotion="smile"] #brow-right {
+    transform: translateY(-1.5px);
+}
+
+.intro__avatar[data-emotion="surprised"] #eye-left,
+.intro__avatar[data-emotion="surprised"] #eye-right {
+    transform: scale(1.1, 1.13);
+}
+
+.intro__avatar[data-emotion="surprised"] #brow-left,
+.intro__avatar[data-emotion="surprised"] #brow-right {
+    transform: translateY(-3.5px);
+}
+
+.intro__avatar[data-emotion="surprised"] #mouth {
+    transform: translateY(0.5px) scale(0.42, 1.65);
+}
+
+.intro__avatar[data-emotion="wink"] #mouth {
+    transform: rotate(-7deg) scaleX(1.08);
+}
+
+.intro__avatar[data-emotion="skeptical"] #eye-left {
+    transform: scaleY(0.38);
+}
+
+.intro__avatar[data-emotion="skeptical"] #eye-right {
+    transform: scaleY(0.65);
+}
+
+.intro__avatar[data-emotion="skeptical"] #brow-left {
+    transform: translateY(1px) rotate(6deg);
+}
+
+.intro__avatar[data-emotion="skeptical"] #brow-right {
+    transform: translateY(-4px) rotate(-9deg);
+}
+
+.intro__avatar[data-emotion="skeptical"] #mouth {
+    transform: rotate(-5deg) scale(0.85, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .intro__avatar-button,
+    .intro__avatar,
+    .intro__avatar #eyes,
+    .intro__avatar #eye-left,
+    .intro__avatar #eye-right,
+    .intro__avatar #brow-left,
+    .intro__avatar #brow-right,
+    .intro__avatar #mouth {
+        transition: none;
+        transform: none;
+    }
+}
+
+.intro__identity {
+    min-width: 0;
+}
+
 .intro__header h1,
 .intro__header p,
 .intro__body p,
@@ -55,23 +183,6 @@ body {
     flex-direction: column;
     gap: 16px;
     margin-top: 32px;
-}
-
-.main-video {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 248px;
-    overflow: hidden;
-}
-
-.main-video__image {
-    display: block;
-    width: 340px;
-    height: 340px;
-    object-fit: cover;
-    transform: translateX(-30px);
 }
 
 .link,
