@@ -13,40 +13,33 @@ body {
 }
 
 .container {
-    max-width: 546px;
+    max-width: 640px;
     margin: 0 auto;
-    padding: 80px 16px;
-}
-
-@media (min-width: 768px) {
-    .container {
-        padding-right: 40px;
-        padding-left: 40px;
-    }
+    padding: 70px 16px 80px;
 }
 
 .intro__header {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 32px;
-    text-align: center;
+    text-align: left;
 }
 
 .intro__avatar {
     display: block;
-    flex: 0 0 120px;
-    width: 108px;
-    height: 120px;
+    flex: 0 0 88px;
+    width: 80px;
+    height: 88px;
     transform: rotate(var(--head-tilt, 0deg));
     transform-origin: 50% 75%;
 }
 
 .intro__avatar-button {
     display: block;
-    flex: 0 0 120px;
-    width: 108px;
-    height: 120px;
+    flex: 0 0 88px;
+    width: 80px;
+    height: 88px;
     padding: 0;
     border: 0;
     border-radius: 50%;
@@ -73,13 +66,19 @@ body {
 .intro__avatar #eye-right,
 .intro__avatar #brow-left,
 .intro__avatar #brow-right,
+.intro__avatar #moustache,
+.intro__avatar #chin,
 .intro__avatar #mouth {
     transform-box: fill-box;
     transform-origin: center;
     transition: transform 280ms cubic-bezier(0.2, 0, 0, 1);
 }
 
-.intro__avatar.is-curious #brow-right {
+.intro__avatar.is-curious-left #brow-left {
+    transform: translateY(-2.7px) rotate(6deg);
+}
+
+.intro__avatar.is-curious-right #brow-right {
     transform: translateY(-2.7px) rotate(-6deg);
 }
 
@@ -90,6 +89,14 @@ body {
 
 .intro__avatar[data-emotion="smile"] #mouth {
     transform: scale(1.22, 1.35);
+}
+
+.intro__avatar[data-emotion="smile"] #moustache {
+    transform: translateY(-0.6px) scaleX(1.06);
+}
+
+.intro__avatar[data-emotion="smile"] #chin {
+    transform: translateY(0.6px) scaleX(1.04);
 }
 
 .intro__avatar[data-emotion="smile"] #brow-left,
@@ -111,8 +118,24 @@ body {
     transform: translateY(0.5px) scale(0.42, 1.65);
 }
 
+.intro__avatar[data-emotion="surprised"] #moustache {
+    transform: translateY(-0.7px) scaleX(0.96);
+}
+
+.intro__avatar[data-emotion="surprised"] #chin {
+    transform: translateY(1px) scaleY(0.94);
+}
+
 .intro__avatar[data-emotion="wink"] #mouth {
     transform: rotate(-7deg) scaleX(1.08);
+}
+
+.intro__avatar[data-emotion="wink"] #moustache {
+    transform: translateX(-0.3px) rotate(-4deg);
+}
+
+.intro__avatar[data-emotion="wink"] #chin {
+    transform: translateX(0.3px) rotate(-4deg);
 }
 
 .intro__avatar[data-emotion="skeptical"] #eye-left {
@@ -135,6 +158,14 @@ body {
     transform: rotate(-5deg) scale(0.85, 0.45);
 }
 
+.intro__avatar[data-emotion="skeptical"] #moustache {
+    transform: translateY(0.4px) rotate(-3deg) scaleX(0.98);
+}
+
+.intro__avatar[data-emotion="skeptical"] #chin {
+    transform: translateY(-0.6px) rotate(-3deg);
+}
+
 @media (prefers-reduced-motion: reduce) {
     .intro__avatar-button,
     .intro__avatar,
@@ -143,6 +174,9 @@ body {
     .intro__avatar #eye-right,
     .intro__avatar #brow-left,
     .intro__avatar #brow-right,
+    .intro__avatar #lower-face,
+    .intro__avatar #moustache,
+    .intro__avatar #chin,
     .intro__avatar #mouth {
         transition: none;
         transform: none;
@@ -153,9 +187,6 @@ body {
     min-width: 0;
 }
 
-.intro__header h1,
-.intro__header p,
-.intro__body p,
 .work-list-block > p,
 .work-list-block__link,
 .footer__subtext {
@@ -169,11 +200,10 @@ body {
 }
 
 .intro__header h1 {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     font-weight: 400;
 }
 
-.intro__header p,
 .footer__subtext {
     color: var(--text-secondary);
 }
@@ -181,8 +211,32 @@ body {
 .intro__body {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin-top: 32px;
+    gap: 32px;
+    margin-top: 52px;
+}
+
+.intro__header h1,
+.intro__header p,
+.intro__body p {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.intro__header p {
+    color: #a1a1aa;
+}
+
+.intro .link {
+    color: inherit;
+    text-decoration-color: #DEE0E3;
+    text-decoration-thickness: from-font;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.intro .link:hover {
+    color: inherit;
+    text-decoration-color: currentColor;
 }
 
 .link,
@@ -256,7 +310,6 @@ body {
 
 .phone-showcase__media-frame {
     width: 100%;
-    max-width: 550px;
     aspect-ratio: 1;
     overflow: hidden;
     background: var(--bg-showcase);
