@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="case-document">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-ru="Winline — поиск событий · Mirzomansur Okhunov">Winline — finding matches · Mirzomansur Okhunov</title>
+    <meta name="description" content="A pre-match concept for Winline: esports navigation, event filters, and usability testing." data-ru-content="Концепт страницы прематча для Winline: навигация по киберспорту, фильтры событий и проверка макетов.">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../style/variables.css">
+    <link rel="stylesheet" href="../../style/styles.css">
+    <link rel="stylesheet" href="../../style/article.css">
+    <script src="../../js/article.js" defer></script>
+    <script src="../../js/avatar.js" type="module"></script>
+</head>
+<body>
+    <nav class="case-navigation" aria-label="Case study navigation" data-ru-aria-label="Навигация по кейсу">
+        <a class="case-back" href="../../#side-projects"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5.5 4L1.5 8M1.5 8L5.5 12M1.5 8H10C11.3807 8 12.5 6.88071 12.5 5.5V5.5C12.5 4.11929 11.3807 3 10 3H8.5" stroke="currentColor"/></svg><span data-ru="Все проекты">All projects</span></a>
+        <div class="case-toc">
+            <a href="#task" data-ru="Задача">The brief</a>
+            <a href="#approach" data-ru="Отправная точка">A starting point</a>
+            <a href="#games" data-ru="Начать со своей игры">Start with your game</a>
+            <a href="#dates" data-ru="Затем выбрать день">Then pick a day</a>
+            <a href="#details" data-ru="Остаться в списке">Stay in the list</a>
+            <a href="#validation" data-ru="Проверить понятность">Testing clarity</a>
+            <a href="#outcome" data-ru="Что получилось">The outcome</a>
+        </div>
+    </nav>
+    <main class="container case-page">
+        <header class="case-identity">
+            <img class="intro__avatar" src="../../assets/avatar.svg" width="80" height="88" alt="">
+        </header>
+        <article class="case-article" aria-labelledby="case-title">
+            <header class="case-header" id="overview" tabindex="-1" data-reveal>
+                <div class="case-title-row">
+                    <h1 id="case-title" data-ru="Winline — поиск событий">Winline — finding matches</h1>
+                    <div class="case-language" role="group" aria-label="Article language" data-ru-aria-label="Язык статьи" data-language="en" hidden>
+                        <label><input type="radio" name="article-language" value="ru" aria-label="Русский" lang="ru"><span>RU</span></label>
+                        <label><input type="radio" name="article-language" value="en" aria-label="English" lang="en" checked><span>EN</span></label>
+                    </div>
+                </div>
+                <p class="case-meta" data-ru="Тестовое задание">Design exercise</p>
+                <p class="case-lead" data-ru="В тестовом задании для Winline я спроектировал страницу прематча — список предстоящих матчей. Меня интересовал путь человека, который следит за киберспортом: как помочь ему найти свою игру среди событий из всех видов спорта.">For a Winline design exercise, I designed a pre-match page: a list of upcoming matches. I focused on people who follow esports and how they could find their game among events from every sport.</p>
+                <a class="case-demo-link" href="https://youtu.be/P4TvwtX9RrI" target="_blank" rel="noopener noreferrer" data-ru="Посмотреть прототип ↗">Watch the prototype ↗</a>
+            </header>
+
+            <figure class="case-figure" data-reveal>
+                <a class="case-media case-media--orange" href="../../assets/winline/overview.webp" target="_blank" rel="noopener" aria-label="Open the concept overview at full size" data-ru-aria-label="Открыть общий вид концепта в полном размере">
+                    <img src="../../assets/winline/overview.webp" width="2000" height="1380" alt="Winline concept: a match list, games across the top, and an esports tab in the bottom navigation." data-ru-alt="Концепт Winline: список матчей, игры в верхней панели и раздел киберспорта в таббаре." fetchpriority="high" decoding="async">
+                </a>
+                <figcaption data-ru="Концепт раздела киберспорта.">The esports section concept.</figcaption>
+            </figure>
+
+            <section class="case-section" id="task" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Задача">The brief</h2>
+                <p data-ru="Бриф требовал трёх фильтров: по времени начала, виду спорта и маркетам — типам ставок. Приложение предполагалось кроссплатформенным, с опорой на гайдлайны iOS.">The brief called for three filters: start time, sport, and markets—the types of bets available. The app was intended to work across platforms, drawing on iOS guidelines.</p>
+                <p data-ru="Я хотел встроить эти фильтры в последовательный выбор: сначала игра, затем день и нужные коэффициенты.">I wanted these filters to follow a natural sequence: choose a game, pick a day, then find the relevant odds.</p>
+            </section>
+
+            <section class="case-section" id="approach" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Отправная точка">A starting point</h2>
+                <p data-ru="Я разобрал поиск событий в Winline, Fonbet, PARI и «Лиге Ставок». Для интервью подготовил вопросы, но найти респондентов из целевого сегмента не удалось. Пришлось опереться на разбор приложений и собственный опыт.">I reviewed how people find events in Winline, Fonbet, PARI, and Liga Stavok. I prepared interview questions but couldn’t recruit people from the target audience, so I relied on that analysis and my own experience.</p>
+                <p data-ru="Отсюда появилась гипотеза: узнаваемые логотипы и фильтры рядом со списком помогут быстрее находить матчи.">This led to a hypothesis: familiar logos and filters close to the list could help people find matches faster.</p>
+            </section>
+
+            <section class="case-section" id="games" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Начать со своей игры">Start with your game</h2>
+                <p data-ru="Я вынес спорт и киберспорт в отдельные вкладки. Внутри киберспорта разместил прокручиваемую панель игр с логотипами и подписями. Так можно выбрать Dota 2 или CS2 и сузить список до интересующей дисциплины.">I separated sports and esports into their own tabs. Within esports, I added a scrollable row of games with logos and labels. Choosing Dota 2 or CS2 narrows the list to that game.</p>
+            </section>
+            <figure class="case-figure" data-reveal>
+                <a class="case-media case-media--orange" href="../../assets/winline/games.webp" target="_blank" rel="noopener" aria-label="Open the game selection screens at full size" data-ru-aria-label="Открыть экраны выбора игры в полном размере">
+                    <img src="../../assets/winline/games.webp" width="2000" height="1380" alt="All esports events and the list filtered by Fortnite." data-ru-alt="Общий список киберспортивных событий и список после выбора Fortnite." loading="lazy" decoding="async">
+                </a>
+                <figcaption data-ru="Все события и фильтр по Fortnite.">All events and the Fortnite filter.</figcaption>
+            </figure>
+
+            <section class="case-section" id="dates" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Затем выбрать день">Then pick a day</h2>
+                <p data-ru="Следующий шаг — время матча. В прематче я добавил ряд дат с количеством игр: ещё до выбора дня видно, есть ли события. В Live этот ряд убрал — там матчи уже идут.">Next comes the match date. For upcoming matches, I added a row of dates with event counts, so people can see whether a day has any matches before selecting it. I left this row out of Live, where matches are already underway.</p>
+            </section>
+            <figure class="case-figure" data-reveal>
+                <a class="case-media case-media--orange" href="../../assets/winline/dates.webp" target="_blank" rel="noopener" aria-label="Open the date filter screens at full size" data-ru-aria-label="Открыть экраны фильтра по датам в полном размере">
+                    <img src="../../assets/winline/dates.webp" width="2000" height="1380" alt="Upcoming matches: three games today and one after selecting May 28." data-ru-alt="Прематч: три игры на сегодня и одна игра после выбора 28 мая." loading="lazy" decoding="async">
+                </a>
+                <figcaption data-ru="Список меняется при выборе даты.">The list updates when a date is selected.</figcaption>
+            </figure>
+
+            <section class="case-section" id="details" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Остаться в списке">Stay in the list</h2>
+                <p data-ru="Для выбора типа ставки я использовал панель, которая открывается по кнопке сверху. После выбора подпись кнопки меняется, например, с «Исход» на «Тотал»: настройка остаётся видна.">A button at the top opens the market picker. Its label updates after a selection—for example, from “Winner” to “Total”—so the current setting stays visible.</p>
+                <p data-ru="Дополнительные коэффициенты спрятал под шеврон у матча. Их можно раскрыть прямо в списке, без перехода на экран события.">I placed additional odds behind a chevron on each match. They expand within the list, without opening a separate event screen.</p>
+            </section>
+            <figure class="case-figure" data-reveal>
+                <a class="case-media case-media--orange" href="../../assets/winline/markets.webp" target="_blank" rel="noopener" aria-label="Open the market selection screens at full size" data-ru-aria-label="Открыть экраны выбора типа ставки в полном размере">
+                    <img src="../../assets/winline/markets.webp" width="2000" height="1380" alt="Three states: match winner odds, the market picker, and the list with totals selected." data-ru-alt="Три состояния: исход игры, панель выбора типа ставки и список с выбранным тоталом." loading="lazy" decoding="async">
+                </a>
+                <figcaption data-ru="Выбор типа ставки и обновлённый список.">Choosing a market and returning to the updated list.</figcaption>
+            </figure>
+
+            <section class="case-section" id="validation" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Проверить понятность">Testing clarity</h2>
+                <p data-ru="Макеты я проверил на задаче поиска конкретного матча. В тестировании участвовали 70 человек; набрать аудиторию ставок на киберспорт не удалось. Знакомым с термином «прематч» показывал исходную подпись, остальным — «События».">I tested the screens with a task to find a specific match. Seventy people took part, though I couldn’t recruit esports bettors. People familiar with “pre-match” saw that label; everyone else saw “Events.”</p>
+                <p data-ru="Среднее время задания составило 62 и 88 секунд соответственно. Группы видели разные варианты, поэтому эти числа описывают проверку, но не доказывают, что новый интерфейс быстрее прежнего.">The groups took an average of 62 and 88 seconds, respectively. They saw different versions, so these figures describe the test rather than prove that the new interface is faster than the existing one.</p>
+            </section>
+            <figure class="case-figure" data-reveal>
+                <a class="case-media" href="../../assets/winline/usability.webp" target="_blank" rel="noopener" aria-label="Open the test task and results at full size" data-ru-aria-label="Открыть задание и результаты проверки в полном размере">
+                    <img src="../../assets/winline/usability.webp" width="2000" height="1431" alt="Task: find Team Spirit vs. Team Liquid on May 30. Average completion time: 62 seconds for people familiar with “pre-match”, 88 seconds for those unfamiliar with it." data-ru-alt="Задание найти матч Team Spirit — Team Liquid на 30 мая. Среднее время: 62 секунды для знакомых с термином «прематч», 88 секунд для незнакомых." loading="lazy" decoding="async">
+                </a>
+                <figcaption data-ru="Задача: найти матч Team Spirit — Team Liquid на 30 мая.">The task: find Team Spirit vs. Team Liquid on May 30.</figcaption>
+            </figure>
+
+            <section class="case-section" id="outcome" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Что получилось">The outcome</h2>
+                <p data-ru="Получился концепт, в котором три фильтра из брифа встроены в путь поиска матча. Чтобы понять, сокращает ли он время поиска и влияет ли на количество ставок, следующим шагом я бы сравнил его с текущим интерфейсом на целевой аудитории.">The concept brings the three required filters into the flow of finding a match. To learn whether it reduces search time or affects betting activity, I would next compare it with the existing interface using the target audience.</p>
+                <div class="case-resources" aria-label="Project resources" data-ru-aria-label="Материалы проекта">
+                    <a href="https://www.figma.com/design/UWRjMlXVRsryPBNuf9yrs3/Winline?node-id=45-13638" target="_blank" rel="noopener noreferrer" data-ru="Макеты в Figma ↗">Designs in Figma ↗</a>
+                    <a href="https://alovdesigner.notion.site/c5b20f81231940559f2fa38e4c62ebd5" target="_blank" rel="noopener noreferrer" data-ru="Исходный кейс ↗">Original case study ↗</a>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

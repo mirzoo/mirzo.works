@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Mirzomansur Okhunov</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/variables.css">
     <link rel="stylesheet" href="style/styles.css">
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <section class="intro">
             <header class="intro__header">
                 <img class="intro__avatar" src="assets/avatar.svg" width="80" height="88" alt="">
@@ -34,8 +31,33 @@
             </div>
         </section>
 
-        <section class="work-list">
-            <div class="work-list-block">
+        <div class="portfolio-content">
+            <div class="portfolio-chips" role="tablist" aria-label="Portfolio categories">
+                <button class="portfolio-chip" id="tab-work" type="button" role="tab" aria-selected="true" aria-controls="panel-work" data-category="work">Work</button>
+                <button class="portfolio-chip" id="tab-side-projects" type="button" role="tab" aria-selected="false" aria-controls="panel-side-projects" data-category="side-projects" tabindex="-1">Side projects</button>
+                <button class="portfolio-chip" id="tab-explorations" type="button" role="tab" aria-selected="false" aria-controls="panel-explorations" data-category="explorations" tabindex="-1">Explorations</button>
+            </div>
+            <section class="work-index" id="panel-work" role="tabpanel" aria-labelledby="tab-work">
+                <details class="work-index__item" data-project="freeze-card" data-preview="debit">
+                    <summary><span class="work-index__title">T‑Bank debit card</span><span class="work-index__year">2026</span></summary>
+                    <div class="work-index__detail"></div>
+                </details>
+                <details class="work-index__item" data-project="credit-history" data-preview="credit">
+                    <summary><span class="work-index__title">T‑Bank credit ecosystem</span><span class="work-index__year">2025</span></summary>
+                    <div class="work-index__detail"></div>
+                </details>
+                <details class="work-index__item" data-project="design-system">
+                    <summary><span class="work-index__title">ProFinansy</span><span class="work-index__year">2024</span></summary>
+                    <div class="work-index__detail"></div>
+                </details>
+                <div class="work-index__item work-index__label"><p class="work-index__title">ZM-team</p><p class="work-index__year">2023</p></div>
+            </section>
+            <section class="work-list" id="panel-side-projects" role="tabpanel" aria-labelledby="tab-side-projects" hidden></section>
+            <section class="work-list" id="panel-explorations" role="tabpanel" aria-labelledby="tab-explorations" hidden></section>
+        </div>
+
+        <section class="project-library" hidden>
+            <div class="work-list-block" id="freeze-card">
                 <section class="phone-showcase phone-showcase--portrait-video">
                     <div class="phone-showcase__media-frame">
                         <video src="assets/card-freeze-concept.mp4" class="phone-showcase__video phone-showcase__video--portrait" preload="metadata" autoplay loop muted playsinline webkit-playsinline aria-label="Card freeze interaction with ice and falling snow"></video>
@@ -45,7 +67,7 @@
                 <p>Vibe-coded a card freeze interaction in SwiftUI, using a Metal shader to bring the state change to life with ice and falling snow — all in a couple of hours.</p>
             </div>
 
-            <div class="work-list-block">
+            <div class="work-list-block" id="hide-chats">
                 <section class="phone-showcase phone-showcase--full-video" data-ready="false">
                     <div class="phone-showcase__media-frame">
                         <video src="assets/telegram-hidechat.mp4" class="phone-showcase__video phone-showcase__video--full" preload="metadata" autoplay loop muted playsinline webkit-playsinline aria-label="Hide Chats concept for Telegram"></video>
@@ -55,7 +77,7 @@
                 <p>A small concept for Telegram: what if chats could be hidden behind a password?</p>
             </div>
 
-            <div class="work-list-block">
+            <div class="work-list-block" id="credit-history">
                 <section class="phone-showcase">
                     <div class="phone-showcase__content">
                         <div class="phone-showcase__phone-container">
@@ -76,29 +98,15 @@
                 <p>At T-Bank, I redesigned the credit score section — from problem analysis and concept development to design approval and handoff.</p>
             </div>
 
-            <div class="work-list-block">
+            <a class="work-list-block work-list-block--case" id="winline" href="work/winline/" aria-label="Winline — Read case study">
                 <section class="phone-showcase">
-                    <div class="phone-showcase__content">
-                        <div class="phone-showcase__phone-container">
-                            <div class="phone-showcase__phone">
-                                <img src="assets/phoneMockup.png" alt="" class="phone-showcase__frame-img" width="227.5" height="450" aria-hidden="true">
-                                <div class="phone-showcase__phone-content">
-                                    <div class="phone-showcase__player">
-                                        <div class="phone-showcase__player-inner">
-                                            <img src="assets/WinlineConcept.png" alt="Pre-match page concept for Winline" class="phone-showcase__video">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <img src="assets/winline/cover.png" width="1440" height="1440" alt="Pre-match page concept for Winline" class="phone-showcase__video phone-showcase__video--full" loading="lazy" decoding="async">
                 </section>
-                <p>Pre-match page concept <span>• Winline</span></p>
+                <p class="work-list-block__title">Pre-match page concept <span>• Winline</span></p>
                 <p>For a Winline test assignment, I designed a pre-match esports concept — helping users find upcoming matches faster, compare odds more easily, and place bets with less friction.</p>
-                <a href="#" class="work-list-block__link">Read case study ↗</a>
-            </div>
+            </a>
 
-            <div class="work-list-block">
+            <div class="work-list-block" id="design-system">
                 <section class="phone-showcase phone-showcase--lottie">
                     <div class="phone-showcase__media-frame">
                         <div class="phone-showcase__lottie" id="lottie-design-system" aria-label="Design system animation for pro.finansy"></div>
@@ -106,27 +114,27 @@
                 </section>
                 <p>Design system <span>• pro.finansy</span></p>
                 <p>At pro.finansy, I initiated the design system and built a UI kit that aligned design and development, helping maintain a consistent visual and behavioral experience across the product.</p>
-                <a href="#" class="work-list-block__link">Read case study ↗</a>
             </div>
 
-            <div class="work-list-block">
+            <a class="work-list-block work-list-block--case" id="ddx-fitness" href="work/ddx-fitness/" aria-label="DDX Fitness — Read case study">
                 <section class="phone-showcase phone-showcase--full-video" data-ready="false">
                     <div class="phone-showcase__media-frame">
                         <video src="assets/Render.mp4" poster="assets/FitnessDDX.png" class="phone-showcase__video phone-showcase__video--full" preload="metadata" autoplay loop muted playsinline webkit-playsinline aria-label="Видео концепта фитнес приложения DDX Fitnes"></video>
                     </div>
                 </section>
-                <p>The concept of choosing a coach <span>• DDX Fitnes</span></p>
+                <p class="work-list-block__title">The concept of choosing a coach <span>• DDX Fitnes</span></p>
                 <p>For DDX Fitness, I designed a more visual and engaging trainer selection flow to keep users involved and help them complete the booking without dropping off.</p>
-                <a href="#" class="work-list-block__link">Read case study ↗</a>
-            </div>
+            </a>
         </section>
 
-        <footer class="footer">
-            <p class="footer__subtext">Навайбокожено by Mirzo</p>
-        </footer>
+    </main>
+    <div class="work-preview" aria-hidden="true" inert>
+        <img class="work-preview__image" data-preview-image="debit" src="assets/1600x1200.png" width="1600" height="1200" alt="" decoding="async">
+        <img class="work-preview__image" data-preview-image="credit" src="assets/1600x1200-2.png" width="1600" height="1200" alt="" decoding="async">
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
     <script src="js/phone-showcase.js"></script>
+    <script src="js/portfolio.js"></script>
     <script src="js/lottie-design-system.js"></script>
     <script type="module" src="js/avatar.js"></script>
 </body>
