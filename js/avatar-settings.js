@@ -19,6 +19,6 @@ export const avatarSettings = {
     reactionDuration: 1000,
     rapidTapCount: 3,
     rapidTapWindow: 1200,
-    sound: true,
+    sound: false,
     volume: 0.7
 };

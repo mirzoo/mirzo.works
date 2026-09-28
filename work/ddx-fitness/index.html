@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="case-document">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-ru="DDX Fitness — подбор тренера · Mirzomansur Okhunov">DDX Fitness — finding a trainer · Mirzomansur Okhunov</title>
+    <meta name="description" content="A trainer selection concept for DDX Fitness, from fitness goals to a personalized search." data-ru-content="Концепт подбора тренера для DDX Fitness: от цели тренировок к персональному подбору.">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../style/variables.css">
+    <link rel="stylesheet" href="../../style/styles.css">
+    <link rel="stylesheet" href="../../style/article.css">
+    <script src="../../js/article.js" defer></script>
+    <script src="../../js/avatar.js" type="module"></script>
+</head>
+<body>
+    <nav class="case-navigation" aria-label="Case study navigation" data-ru-aria-label="Навигация по кейсу">
+        <a class="case-back" href="../../#side-projects"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5.5 4L1.5 8M1.5 8L5.5 12M1.5 8H10C11.3807 8 12.5 6.88071 12.5 5.5V5.5C12.5 4.11929 11.3807 3 10 3H8.5" stroke="currentColor"/></svg><span data-ru="Все проекты">All projects</span></a>
+        <div class="case-toc">
+            <a href="#task" data-ru="Задача">The brief</a>
+            <a href="#research" data-ru="Понять сомнения">Understanding doubts</a>
+            <a href="#goal" data-ru="Начать с цели">Start with a goal</a>
+            <a href="#input" data-ru="Наглядный ввод">Visual inputs</a>
+            <a href="#profile" data-ru="Профиль тренера">The trainer profile</a>
+            <a href="#outcome" data-ru="Что получилось">The outcome</a>
+        </div>
+    </nav>
+    <main class="container case-page">
+        <header class="case-identity">
+            <img class="intro__avatar" src="../../assets/avatar.svg" width="80" height="88" alt="">
+        </header>
+        <article class="case-article" aria-labelledby="case-title">
+            <header class="case-header" id="overview" tabindex="-1" data-reveal>
+                <div class="case-title-row">
+                    <h1 id="case-title" data-ru="DDX Fitness — подбор тренера">DDX Fitness — finding a trainer</h1>
+                    <div class="case-language" role="group" aria-label="Article language" data-ru-aria-label="Язык статьи" data-language="en" hidden>
+                        <label><input type="radio" name="article-language" value="ru" aria-label="Русский" lang="ru"><span>RU</span></label>
+                        <label><input type="radio" name="article-language" value="en" aria-label="English" lang="en" checked><span>EN</span></label>
+                    </div>
+                </div>
+                <p class="case-meta" data-ru="Тестовое задание">Design exercise</p>
+                <p class="case-lead" data-ru="Записаться к тренеру можно одним нажатием. Но прежде нужно понять, подходит ли он тебе. В тестовом концепте для DDX Fitness я сосредоточился на этом решении: как связать цель клиента с выбором специалиста, которому он готов довериться.">Booking a trainer can take one tap. First, though, you need to know if they’re right for you. In this design exercise for DDX Fitness, I focused on that decision: connecting a client’s goal with a trainer they feel ready to trust.</p>
+            </header>
+
+            <figure class="case-figure" data-reveal>
+                <div class="case-media">
+                    <video class="case-video" src="../../assets/Render.mp4" poster="../../assets/FitnessDDX.png" width="1920" height="1920" controls muted playsinline loop preload="metadata" aria-label="DDX Fitness trainer selection prototype" data-ru-aria-label="Демонстрация концепта подбора тренера DDX Fitness"></video>
+                </div>
+                <figcaption data-ru="Прототип: выбор цели, ввод параметров и переход к поиску тренера. Видео без звука.">Prototype: choosing a goal, entering details, and moving on to the trainer search. No audio.</figcaption>
+            </figure>
+
+            <section class="case-section" id="task" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Задача">The brief</h2>
+                <p data-ru="В брифе клиентка хочет заниматься по будням после работы в клубе «DDX Щука». Её цели — снизить вес и набрать мышечную массу. От тренера она ждёт программу питания, контроль техники и помощь в соблюдении рекомендаций.">The brief described a client who wants to train after work on weekdays at DDX Shchuka. She wants to lose weight and build muscle, with a trainer who can help with nutrition, technique, and following a plan.</p>
+                <p data-ru="Нужно было продумать путь записи и экран тренера с опорой на текущий UI. Я начал с вопроса: какой информации не хватает человеку, чтобы выбрать специалиста?">The task was to design the booking flow and trainer profile using the existing UI. I started with a question: what does someone need to know before choosing a trainer?</p>
+            </section>
+
+            <section class="case-section" id="research" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Понять сомнения перед записью">Understanding doubts before booking</h2>
+                <p data-ru="Я провёл небольшой опрос — в исследовании участвовали 10 человек. Среди важных факторов выбора они отмечали профессиональный опыт, специализацию и отзывы. В ответах звучали и личные критерии: впечатление от человека и сходные взгляды на тренировки.">I ran a small survey with 10 participants. They named experience, specialization, and reviews as important factors. Personal considerations came up too: their impression of the trainer and a shared approach to exercise.</p>
+                <p data-ru="Для меня это сместило акцент с кнопки записи на доверие к тренеру. Я сформулировал гипотезу: профиль должен помогать оценить специалиста и понять, чего ждать от занятий.">This shifted my focus from the booking button to trust. My hypothesis was that a profile should help people assess a trainer and understand what to expect from working with them.</p>
+            </section>
+
+            <section class="case-section" id="goal" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Начать с цели">Start with a goal</h2>
+                <p data-ru="Для тех, кто ещё не знает, кого искать, я предусмотрел подбор по цели: сбросить вес, нарастить мышцы или поддерживать форму. Ответы оформил карточками с изображениями.">For people who don’t yet know whom to look for, I designed a guided flow around three goals: losing weight, building muscle, or staying in shape. Each option is a card with an image.</p>
+                <p data-ru="Подбор ведёт к списку тренеров. При этом в схеме оставил и прямой вход в список — чтобы не заставлять всех проходить анкету.">The flow leads to a list of trainers. I also kept a direct route to that list, so the questionnaire wouldn’t be mandatory for everyone.</p>
+            </section>
+
+            <section class="case-section" id="input" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Сделать ввод наглядным">Make inputs visual</h2>
+                <p data-ru="В анкете каждый параметр вынес на отдельный экран. Для роста использовал вертикальную шкалу рядом с фигурой человека, для веса — горизонтальную. Крупное число показывает текущий выбор, кнопка внизу переводит дальше.">Each measurement gets its own screen. Height uses a vertical scale beside a human figure; weight uses a horizontal one. A large number shows the current value, with a button at the bottom to continue.</p>
+                <p data-ru="Так ввод становится последовательностью коротких действий. После ответов прототип показывает переход к поиску подходящих тренеров.">This turns the form into a sequence of short actions. After the questions, the prototype transitions into a search for suitable trainers.</p>
+            </section>
+            <figure class="case-figure" data-reveal>
+                <a class="case-media case-media--phone" href="../../assets/FitnessDDX.png" target="_blank" rel="noopener" aria-label="Open the height input screen at full size" data-ru-aria-label="Открыть экран ввода роста в полном размере">
+                    <img src="../../assets/FitnessDDX.png" width="449" height="916" alt="Height input screen: a human figure, vertical scale, selected value, and a continue button." data-ru-alt="Экран ввода роста: фигура человека, вертикальная шкала, выбранное значение и кнопка продолжения." loading="lazy" decoding="async">
+                </a>
+                <figcaption data-ru="Вариант экрана ввода роста.">A version of the height input screen.</figcaption>
+            </figure>
+
+            <section class="case-section" id="profile" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Помочь оценить тренера">Help people assess a trainer</h2>
+                <p data-ru="В профиле я собрал опыт, рейтинг, клуб и короткий рассказ о специалисте. Кнопку записи поставил рядом с основной информацией. Также предусмотрел фотографии и результаты учеников — как дополнительную опору для выбора.">The profile brings together experience, rating, club, and a short introduction. I placed the booking button beside the main information and planned space for photos and client results to support the decision.</p>
+                <p data-ru="Мне было важно показать человека за карточкой. После знакомства с профилем сценарий ведёт к записи, выбору даты и времени.">I wanted to show the person behind the card. From the profile, the flow continues to booking and choosing a date and time.</p>
+            </section>
+            <figure class="case-figure" data-reveal>
+                <a class="case-media case-media--phone" href="../../assets/ddx/coach-profile.png" target="_blank" rel="noopener" aria-label="Open the trainer profile excerpt at full size" data-ru-aria-label="Открыть фрагмент профиля тренера в полном размере">
+                    <img src="../../assets/ddx/coach-profile.png" width="523" height="1019" alt="Trainer profile concept: photo, rating, experience, club, introduction, and booking button." data-ru-alt="Фрагмент концепта профиля тренера: фотография, рейтинг, опыт, клуб, рассказ о себе и кнопка записи." loading="lazy" decoding="async">
+                </a>
+                <figcaption data-ru="Фрагмент профиля тренера из презентации проекта.">A trainer profile excerpt from the project presentation.</figcaption>
+            </figure>
+
+            <section class="case-section" id="outcome" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Что получилось">The outcome</h2>
+                <p data-ru="За три дня я подготовил 26 экранов и интерактивный прототип. В центре сценария — подбор по цели и профиль, который помогает принять решение о записи.">In three days, I created 26 screens and an interactive prototype. The flow centers on matching by goal and a profile that helps people decide whether to book.</p>
+                <p data-ru="Уведомления для мотивации, отдельный список услуг и детальную проработку виджета прогресса оставил за рамками этой версии. Влияние концепта на количество записей и выручку ещё нужно проверить — в проекте это целевые метрики, а не измеренный результат.">Motivational notifications, a separate services list, and a detailed progress widget were outside this version’s scope. The effect on bookings and revenue still needs testing: these were target metrics, not measured results.</p>
+                <div class="case-resources" aria-label="Project resources" data-ru-aria-label="Материалы проекта">
+                    <a href="https://www.figma.com/design/Sp5wprJ3JDHANVh3oUjDre/DDX-Fitness--Copy-?node-id=1-21380" target="_blank" rel="noopener noreferrer" data-ru="Материалы в Figma ↗">Project in Figma ↗</a>
+                    <a href="https://alovdesigner.notion.site/DDX-Fitness-7932ec33e09d413da8b7e45c0d19a3a5" target="_blank" rel="noopener noreferrer" data-ru="Исходный бриф ↗">Original brief ↗</a>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
