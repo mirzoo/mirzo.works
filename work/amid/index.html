@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" class="case-document">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-ru="Амид — покупки и программа лояльности · Mirzomansur Okhunov">Amid — grocery shopping and loyalty · Mirzomansur Okhunov</title>
+    <meta name="description" content="A client redesign for Amid: grocery shopping, loyalty mechanics built from scratch, and category imagery created with Midjourney. Approved and handed off to development." data-ru-content="Клиентский редизайн приложения «Амид»: покупка продуктов, программа лояльности с нуля и изображения категорий в Midjourney. Дизайн согласован и передан в разработку.">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../style/variables.css">
+    <link rel="stylesheet" href="../../style/styles.css">
+    <link rel="stylesheet" href="../../style/article.css">
+    <script src="../../js/article.js" defer></script>
+    <script src="../../js/avatar.js" type="module"></script>
+</head>
+<body>
+    <nav class="case-navigation" aria-label="Case study navigation" data-ru-aria-label="Навигация по кейсу">
+        <a class="case-back" href="../../#side-projects"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5.5 4L1.5 8M1.5 8L5.5 12M1.5 8H10C11.3807 8 12.5 6.88071 12.5 5.5V5.5C12.5 4.11929 11.3807 3 10 3H8.5" stroke="currentColor"/></svg><span data-ru="Все проекты">All projects</span></a>
+        <div class="case-toc">
+            <a href="#task" data-ru="Задача и моя роль">The brief and my role</a>
+            <a href="#research" data-ru="Анализ конкурентов">Competitor analysis</a>
+            <a href="#shopping" data-ru="Путь покупки">The shopping flow</a>
+            <a href="#loyalty" data-ru="Карта лояльности">The loyalty card</a>
+            <a href="#rewards" data-ru="Баллы и задания">Points and challenges</a>
+            <a href="#expiry" data-ru="Срок действия бонусов">Points expiry</a>
+            <a href="#imagery" data-ru="Изображения категорий">Category imagery</a>
+            <a href="#outcome" data-ru="Результат">The outcome</a>
+        </div>
+    </nav>
+    <main class="container case-page">
+        <header class="case-identity">
+            <img class="intro__avatar" src="../../assets/avatar.svg" width="80" height="88" alt="">
+        </header>
+        <article class="case-article" aria-labelledby="case-title">
+            <header class="case-header" id="overview" tabindex="-1" data-reveal>
+                <div class="case-title-row">
+                    <h1 id="case-title" data-ru="Амид — покупки и программа лояльности">Amid — grocery shopping and loyalty</h1>
+                    <div class="case-language" role="group" aria-label="Article language" data-ru-aria-label="Язык статьи" data-language="en" hidden>
+                        <label><input type="radio" name="article-language" value="ru" aria-label="Русский" lang="ru"><span>RU</span></label>
+                        <label><input type="radio" name="article-language" value="en" aria-label="English" lang="en" checked><span>EN</span></label>
+                    </div>
+                </div>
+                <p class="case-meta" data-ru="Клиентский проект · Согласован и передан в разработку">Client project · Approved and handed off to development</p>
+                <p class="case-lead" data-ru="Для сети супермаркетов «Амид» в Худжанде мы разработали редизайн мобильного приложения. В концепте связали заказ продуктов с доставкой и использование бонусной карты в магазине. Моей отдельной задачей стала программа лояльности: я придумал её механику с нуля и продумал, как показать покупателю условия, награды и прогресс.">We redesigned the mobile app for Amid, a supermarket chain in Khujand. The concept brings together grocery delivery and a loyalty card for in-store shopping. My particular focus was the loyalty program: I developed its mechanics from scratch and worked out how to show shoppers the conditions, rewards, and their progress.</p>
+            </header>
+
+            <figure class="case-figure" data-reveal>
+                <a class="case-media" href="../../assets/amid/cover.png" target="_blank" rel="noopener" aria-label="Open the Amid app cover at full size" data-ru-aria-label="Открыть обложку приложения «Амид» в полном размере">
+                    <img src="../../assets/amid/cover.png" width="1440" height="1440" alt="Amid app concept on a phone: a loyalty card, product offers, purchase history, and achievements." data-ru-alt="Концепт приложения «Амид» на телефоне: бонусная карта, предложения товаров, история покупок и достижения." fetchpriority="high" decoding="async">
+                </a>
+                <figcaption data-ru="Главный экран концепта: покупки и программа лояльности в одном приложении.">The home screen concept: shopping and loyalty in one app.</figcaption>
+            </figure>
+
+            <section class="case-section" id="task" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Задача и моя роль">The brief and my role</h2>
+                <p data-ru="«Амид» обратился к нашей команде за редизайном приложения. Нужно было проработать его визуальную концепцию и основные сценарии: найти продукт, собрать корзину, оформить доставку и воспользоваться картой лояльности.">Amid commissioned our team to redesign its app. We needed to develop the visual concept and the main flows: finding a product, building a basket, arranging delivery, and using the loyalty card.</p>
+                <p data-ru="Я участвовал в создании общей визуальной концепции вместе с командой. Самостоятельно провёл анализ конкурентов, разработал механику бонусной программы и генерировал изображения для категорий каталога в Midjourney. У заказчика ещё не было готовых правил начисления бонусов, поэтому эту часть я продумывал с нуля.">I helped develop the overall visual concept with the team. I independently conducted the competitor analysis, designed the loyalty mechanics, and generated category imagery in Midjourney. The client had no established rules for earning points, so I developed that part from scratch.</p>
+            </section>
+
+            <section class="case-section" id="research" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Анализ конкурентов">Competitor analysis</h2>
+                <p data-ru="Я собрал скриншоты и разобрал приложения Пятёрочки, Ленты, ВкусВилла, Дикси, Магнита и других продуктовых сервисов. Сравнивал навигацию, структуру каталога, карточки товаров и способы показать программу лояльности. Меня интересовало, как человек переходит между покупкой и бонусами и какая информация доступна на каждом шаге.">I collected screenshots and reviewed Pyaterochka, Lenta, VkusVill, Diksi, Magnit, and other grocery services. I compared navigation, catalog structure, product details, and how each app presents its loyalty program. I looked at how shoppers move between buying products and using rewards, and what information they see at each step.</p>
+                <p data-ru="ВкусВилл стал ориентиром для отдельного раздела карты, а каталог Пятёрочки — для группировки товаров. В нашем концепте бонусная карта получила собственный экран и заметное место в нижней навигации. Каталог разделили на категории и подкатегории, а условия покупки и бонусов разместили рядом с соответствующими действиями.">VkusVill informed the dedicated card section, while Pyaterochka’s catalog provided a reference for grouping products. In our concept, the loyalty card has its own screen and a prominent place in the bottom navigation. We organized the catalog into categories and subcategories, placing purchase and reward conditions beside the relevant actions.</p>
+            </section>
+
+            <section class="case-section" id="shopping" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Путь покупки">The shopping flow</h2>
+                <p data-ru="Мы проработали структуру приложения и user flow: от главного экрана и поиска до оплаты и получения заказа. В схеме учли регистрацию, пустую корзину, отсутствие результатов поиска, ошибку оплаты и отслеживание доставки.">We mapped the app structure and user flow, from the home screen and search to payment and receiving an order. The flow includes registration, an empty basket, no search results, payment errors, and delivery tracking.</p>
+                <p data-ru="В каталоге можно переходить между подкатегориями и добавлять товары прямо из списка. Подробности продукта открываются в нижней панели: фотография, цена за единицу, состав и пищевая ценность. Для весовых товаров предусмотрели выбор количества, а для других продуктов — варианты объёма и фасовки.">Shoppers can switch between subcategories and add products directly from the list. Product details open in a bottom sheet with a photo, unit price, ingredients, and nutrition. Products sold by weight have a quantity selector; other products can offer volume and pack-size options.</p>
+                <p data-ru="В корзине условия и стоимость доставки видны до оформления заказа. На этапе оплаты можно выбрать способ оплаты и использование баллов. После оформления пользователь видит статус доставки и может вернуться к нему с главного экрана.">The basket shows delivery conditions and cost before checkout. At payment, shoppers can choose a payment method and whether to use points. After placing an order, they can track its delivery status and return to it from the home screen.</p>
+            </section>
+            <figure class="case-figure" data-reveal>
+                <a class="case-media case-media--phone" href="../../assets/amid/weight.png" target="_blank" rel="noopener" aria-label="Open the product detail screen at full size" data-ru-aria-label="Открыть карточку товара в полном размере">
+                    <img src="../../assets/amid/weight.png" width="375" height="810" alt="A product bottom sheet with price per kilogram, nutrition, weight, and confirmation that the product is in the basket." data-ru-alt="Карточка товара в нижней панели: цена за килограмм, пищевая ценность, вес и подтверждение добавления в корзину." loading="lazy" decoding="async">
+                </a>
+                <figcaption data-ru="Карточка весового товара после добавления в корзину.">A product sold by weight, shown after adding it to the basket.</figcaption>
+            </figure>
+
+            <section class="case-section" id="loyalty" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Карта лояльности">The loyalty card</h2>
+                <p data-ru="Я продумал механику карты так, чтобы покупатель мог предъявить её на кассе, проверить баланс и понять, как получить дополнительные бонусы. В концепте QR-код и накопления собраны в верхней части экрана. Код можно увеличить, а если он не считывается — предъявить номер карты.">I designed the card mechanics around presenting it at checkout, checking the balance, and understanding how to earn more rewards. In the concept, the QR code and balance sit at the top of the screen. Shoppers can enlarge the code or show the card number if scanning fails.</p>
+                <p data-ru="Месячный и квартальный ретробонусы связаны с суммой покупок за соответствующий период. Их условия и прогресс вынесены на отдельные экраны: покупатель видит цель и сколько осталось до награды. Рядом с картой также доступны история покупок и избранное.">Monthly and quarterly bonus rewards are tied to purchase totals over each period. Separate screens explain the conditions and show progress, so shoppers can see the target and what remains before earning the reward. Purchase history and favorites are also accessible from the card screen.</p>
+            </section>
+            <figure class="case-figure" data-reveal>
+                <a class="case-media case-media--phone" href="../../assets/amid/loyalty-card.png" target="_blank" rel="noopener" aria-label="Open the loyalty card screen at full size" data-ru-aria-label="Открыть экран карты лояльности в полном размере">
+                    <img src="../../assets/amid/loyalty-card.png" width="375" height="812" alt="The loyalty card screen with a QR code, points balance, monthly and quarterly rewards, purchase history, and challenges." data-ru-alt="Экран карты лояльности: QR-код, баланс, месячный и квартальный ретробонусы, история покупок и задания." loading="lazy" decoding="async">
+                </a>
+                <figcaption data-ru="Карта и основные возможности программы лояльности собраны на одном экране.">The card and the main loyalty features share one screen.</figcaption>
+            </figure>
+            <figure class="case-figure" data-reveal>
+                <div class="case-media case-media--screens">
+                    <a href="../../assets/amid/monthly-bonus.png" target="_blank" rel="noopener" aria-label="Open the monthly reward screen at full size" data-ru-aria-label="Открыть экран месячного ретробонуса в полном размере">
+                        <img src="../../assets/amid/monthly-bonus.png" width="375" height="812" alt="Monthly reward conditions and a progress bar showing the amount remaining." data-ru-alt="Условия месячного ретробонуса и прогресс с оставшейся суммой покупок." loading="lazy" decoding="async">
+                    </a>
+                    <a href="../../assets/amid/quarterly-bonus.png" target="_blank" rel="noopener" aria-label="Open the quarterly reward screen at full size" data-ru-aria-label="Открыть экран квартального ретробонуса в полном размере">
+                        <img src="../../assets/amid/quarterly-bonus.png" width="375" height="812" alt="Quarterly reward conditions and progress toward the purchase target." data-ru-alt="Условия квартального ретробонуса и прогресс до цели по сумме покупок." loading="lazy" decoding="async">
+                    </a>
+                </div>
+                <figcaption data-ru="Месячный и квартальный ретробонусы. Числа показаны как примеры из макетов.">Monthly and quarterly rewards. The figures are examples from the mockups.</figcaption>
+            </figure>
+
+            <section class="case-section" id="rewards" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Баллы и задания">Points and challenges</h2>
+                <p data-ru="В предложенной механике магазин сам определяет, сколько баллов начислять за покупку конкретного товара. Это даёт ему возможность продвигать выбранные позиции дополнительной наградой. Покупатель видит предложение, количество баллов и срок действия.">In the proposed system, the store chooses how many points to award for each product. This gives it a way to promote selected items through additional rewards. Shoppers see the offer, the points available, and its end date.</p>
+                <p data-ru="Для геймификации я предложил задания: заполнить профиль или купить товары из определённого списка. Одни задания требуют одного действия, другие — нескольких. Экран показывает условия и прогресс, а выполненные пункты отличаются от оставшихся. Из задания можно открыть карточку нужного товара.">For gamification, I proposed challenges such as completing a profile or buying products from a selected list. Some require one action; others involve several. The screen shows the conditions and progress, with completed items distinguished from those remaining. Shoppers can open a product’s details directly from the challenge.</p>
+            </section>
+            <figure class="case-figure" data-reveal>
+                <div class="case-media case-media--screens">
+                    <a href="../../assets/amid/task-start.png" target="_blank" rel="noopener" aria-label="Open the challenge before progress at full size" data-ru-aria-label="Открыть задание до выполнения покупок в полном размере">
+                        <img src="../../assets/amid/task-start.png" width="375" height="812" alt="A challenge to buy three selected products, with zero items completed and a points reward." data-ru-alt="Задание на покупку трёх выбранных товаров: ни один пункт ещё не выполнен, указана награда в баллах." loading="lazy" decoding="async">
+                    </a>
+                    <a href="../../assets/amid/task-progress.png" target="_blank" rel="noopener" aria-label="Open the challenge with progress at full size" data-ru-aria-label="Открыть задание с прогрессом в полном размере">
+                        <img src="../../assets/amid/task-progress.png" width="375" height="812" alt="The same challenge with two of three products completed and one purchase remaining." data-ru-alt="То же задание: выполнены два пункта из трёх, осталась покупка одного товара." loading="lazy" decoding="async">
+                    </a>
+                </div>
+                <figcaption data-ru="Задание до покупок и после выполнения части условий. Размер награды — пример из макета.">A challenge before purchases and after partial completion. The reward amount is a mockup example.</figcaption>
+            </figure>
+
+            <section class="case-section" id="expiry" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Срок действия бонусов">Points expiry</h2>
+                <p data-ru="Для накопленных баллов я предусмотрел отдельный экран со сроком действия. На нём видны баланс, дата сгорания и количество оставшихся дней. Цветная шкала подчёркивает приближение срока, чтобы покупатель мог вовремя воспользоваться бонусами.">I designed a separate screen for accumulated points and their expiry. It shows the balance, expiry date, and days remaining. A colored bar emphasizes the approaching deadline, helping shoppers use their rewards in time.</p>
+                <p data-ru="Ниже показана история по месяцам: сколько баллов начислено и сколько сгорело. Так рядом с текущим балансом есть объяснение того, что происходило с накоплениями.">Below, a monthly history shows how many points were earned and how many expired. This gives shoppers context for the current balance and what has happened to their rewards.</p>
+            </section>
+            <figure class="case-figure" data-reveal>
+                <a class="case-media case-media--phone" href="../../assets/amid/points-expiry.png" target="_blank" rel="noopener" aria-label="Open the points expiry screen at full size" data-ru-aria-label="Открыть экран срока действия баллов в полном размере">
+                    <img src="../../assets/amid/points-expiry.png" width="375" height="812" alt="Points balance, days remaining before expiry, and monthly earned and expired points history." data-ru-alt="Баланс баллов, оставшиеся дни до сгорания и история начисленных и сгоревших баллов по месяцам." loading="lazy" decoding="async">
+                </a>
+                <figcaption data-ru="Баланс, срок действия и история баллов. Даты и суммы — примеры из макета.">Balance, expiry, and points history. Dates and amounts are mockup examples.</figcaption>
+            </figure>
+
+            <section class="case-section" id="imagery" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Изображения категорий">Category imagery</h2>
+                <p data-ru="Я генерировал изображения продуктов для категорий каталога в Midjourney. Для фруктов, овощей и других категорий хотел получить реалистичные изображения, которые помогают узнать содержимое раздела по картинке. В финальном интерфейсе они размещены на цветных карточках рядом с названиями.">I generated product imagery for catalog categories in Midjourney. For fruit, vegetables, and other categories, I aimed for realistic images that help shoppers recognize what a section contains. In the final interface, they appear on colored tiles beside the category names.</p>
+            </section>
+            <figure class="case-figure" data-reveal>
+                <a class="case-media case-media--phone" href="../../assets/amid/catalog.png" target="_blank" rel="noopener" aria-label="Open the catalog category screen at full size" data-ru-aria-label="Открыть экран категорий каталога в полном размере">
+                    <img src="../../assets/amid/catalog.png" width="375" height="812" alt="Catalog categories with product imagery: fruit and berries, vegetables, greens, and dairy products." data-ru-alt="Категории каталога с изображениями продуктов: фрукты и ягоды, овощи, зелень и молочные продукты." loading="lazy" decoding="async">
+                </a>
+                <figcaption data-ru="Изображения продуктов внутри финальных карточек категорий.">Product imagery in the final category tiles.</figcaption>
+            </figure>
+
+            <section class="case-section" id="outcome" tabindex="-1" data-case-section data-reveal>
+                <h2 data-ru="Результат">The outcome</h2>
+                <p data-ru="Мы подготовили визуальную концепцию, структуру приложения, пользовательские сценарии и финальные макеты. Заказчик согласовал и принял результат, после чего мы передали дизайн команде разработки.">We prepared the visual concept, app structure, user flows, and final mockups. The client approved and accepted the work, and we handed the design over to the development team.</p>
+                <p data-ru="Программа лояльности и задания были задуманы как способы стимулировать повторные покупки и продвигать выбранные товары. Их влияние на количество покупок и выручку в рамках нашей работы не измерялось.">The loyalty program and challenges were designed to encourage repeat purchases and promote selected products. Their effect on purchase frequency and revenue was not measured as part of our work.</p>
+                <div class="case-resources" aria-label="Project resources" data-ru-aria-label="Материалы проекта">
+                    <a href="https://www.figma.com/design/VbuYrZlcRKAaok3RhNDoA4/Amid?node-id=1-13189" target="_blank" rel="noopener noreferrer" data-ru="Финальные макеты в Figma ↗">Final designs in Figma ↗</a>
+                    <a href="https://www.figma.com/design/VbuYrZlcRKAaok3RhNDoA4/Amid?node-id=1-12706" target="_blank" rel="noopener noreferrer" data-ru="Анализ конкурентов ↗">Competitor analysis ↗</a>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

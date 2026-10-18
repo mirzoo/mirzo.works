@@ -1,23 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var showcases = document.querySelectorAll('.phone-showcase__phone-content--video, .phone-showcase--full-video');
-
-    showcases.forEach(function (showcase) {
-        var video = showcase.querySelector('video');
-
-        if (!video) {
-            return;
+    document.querySelectorAll('.phone-showcase video').forEach(function (video) {
+        var ambient = video.closest('.phone-showcase--ambient');
+        if (ambient && video.poster) {
+            ambient.style.setProperty('--showcase-backdrop', 'url(' + JSON.stringify(video.poster) + ')');
         }
 
-        function markReady() {
-            showcase.dataset.ready = 'true';
-        }
-
-        if (video.readyState >= 2) {
-            markReady();
-            return;
-        }
-
-        video.addEventListener('loadeddata', markReady, { once: true });
-        video.addEventListener('canplay', markReady, { once: true });
+        video.addEventListener('error', function () {
+            // Reset the failed source so the native poster stays visible.
+            video.dataset.failed = 'true';
+            video.pause();
+            video.controls = false;
+            video.removeAttribute('src');
+            video.load();
+        });
     });
 });

@@ -288,6 +288,27 @@
     height: auto;
 }
 
+.case-media--screens {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 280px));
+    justify-content: center;
+    align-items: start;
+    gap: 24px;
+    padding: 32px 24px;
+}
+
+.case-media--screens a {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.case-media--screens a:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 4px;
+}
+
 .case-figure figcaption {
     max-width: 608px;
     margin: 12px auto 0;
@@ -304,6 +325,10 @@
 }
 
 @media (max-width: 767px) {
+    .case-media--screens {
+        grid-template-columns: minmax(0, 280px);
+    }
+
     .case-figure {
         width: 100%;
         margin-left: 0;

@@ -53,14 +53,6 @@ body {
     transform: scale(0.96);
 }
 
-.intro__avatar-button:focus-visible {
-    outline: none;
-}
-
-.intro__avatar-button.is-pointer-focused:focus {
-    outline: none;
-}
-
 .intro__avatar #eye-left,
 .intro__avatar #eye-right,
 .intro__avatar #brow-left,
@@ -216,7 +208,7 @@ body {
 }
 
 .intro__header p {
-    color: #a1a1aa;
+    color: var(--text-secondary);
 }
 
 .intro .link {
@@ -309,20 +301,27 @@ body {
     justify-content: center;
 }
 
-.phone-showcase--full-video {
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
-.phone-showcase--full-video[data-ready="true"] {
-    opacity: 1;
-}
-
 .phone-showcase__media-frame {
     width: 100%;
     aspect-ratio: 1;
     overflow: hidden;
     background: var(--bg-showcase);
+}
+
+.phone-showcase--ambient .phone-showcase__media-frame {
+    position: relative;
+    isolation: isolate;
+}
+
+.phone-showcase--ambient .phone-showcase__media-frame::before {
+    position: absolute;
+    z-index: -1;
+    inset: -10%;
+    content: '';
+    background: var(--showcase-backdrop) center / cover no-repeat;
+    filter: blur(28px);
+    opacity: 0.75;
+    pointer-events: none;
 }
 
 .phone-showcase--full-video .phone-showcase__media-frame {
@@ -387,12 +386,6 @@ body {
 .phone-showcase__phone-content--video .phone-showcase__player {
     position: relative;
     z-index: 2;
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
-.phone-showcase__phone-content--video[data-ready="true"] .phone-showcase__player {
-    opacity: 1;
 }
 
 .phone-showcase__video {
@@ -415,6 +408,20 @@ body {
 
 .phone-showcase__video--portrait {
     object-position: center;
+}
+
+.phone-showcase__video--contain {
+    object-fit: contain;
+}
+
+/* Match the phone sizes across recordings with different amounts of background. */
+.phone-showcase__video--app-switcher {
+    transform: translateY(1.5%) scale(1.12);
+}
+
+.phone-showcase__video--freeze-card {
+    transform: translateY(-6.7%) scale(1.42);
+    clip-path: inset(19.5% 0 0);
 }
 
 .phone-showcase__lottie {
@@ -507,10 +514,11 @@ body {
     cursor: default;
 }
 
-a:focus,
-button:focus,
-summary:focus {
-    outline: none;
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 4px;
 }
 
 .work-index summary:focus-visible .work-index__title,
@@ -632,9 +640,7 @@ summary:focus {
 @media (prefers-reduced-motion: reduce) {
     .work-preview,
     .work-preview__image,
-    .portfolio-chip,
-    .phone-showcase--full-video,
-    .phone-showcase__phone-content--video .phone-showcase__player {
+    .portfolio-chip {
         transition: none;
     }
 }
