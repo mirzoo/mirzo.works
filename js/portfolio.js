@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var explorations = document.getElementById('panel-explorations');
     var details = Array.from(work.querySelectorAll('details'));
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    var explorationIds = ['freeze-card', 'hide-chats'];
+    var explorationIds = ['app-switcher', 'freeze-card', 'hide-chats'];
     var sideProjects = document.getElementById('panel-side-projects');
     var revealAnimations = new Set();
     var category = 'work';
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         details.forEach(function (item) {
             item.querySelector('.work-index__detail').appendChild(document.getElementById(item.dataset.project));
         });
-        ['winline', 'ddx-fitness'].forEach(function (id) { sideProjects.appendChild(document.getElementById(id)); });
+        ['amid', 'winline', 'ddx-fitness'].forEach(function (id) { sideProjects.appendChild(document.getElementById(id)); });
         if (category === 'explorations') {
             explorationIds.forEach(function (id) { explorations.appendChild(document.getElementById(id)); });
         }
@@ -140,9 +140,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     details.forEach(function (item) {
-        item.querySelector('summary').addEventListener('click', function (event) {
-            // Keep the work index preview-only until case pages are ready.
-            event.preventDefault();
+        item.addEventListener('toggle', function () {
+            if (item.open) hidePreview();
+            syncPlayback();
         });
     });
 
@@ -162,9 +162,21 @@ document.addEventListener('DOMContentLoaded', function () {
     var mediaVisibility = new Map();
     function syncPlayback() {
         mediaVisibility.forEach(function (visible, video) {
-            video.controls = reducedMotion.matches;
-            if (visible && !document.hidden && !reducedMotion.matches) {
-                video.play().catch(function () { video.controls = true; });
+            var failed = video.dataset.failed === 'true';
+            var linked = !!video.closest('a.phone-showcase');
+            visible = visible && !video.closest('[hidden], details:not([open])');
+            video.controls = !failed && !linked && reducedMotion.matches;
+            if (visible && !document.hidden && !failed) {
+                if (video.dataset.src) {
+                    video.src = video.dataset.src;
+                    delete video.dataset.src;
+                    video.load();
+                }
+                if (!reducedMotion.matches) {
+                    video.play().catch(function () {
+                        if (video.dataset.failed !== 'true' && !linked) video.controls = true;
+                    });
+                } else video.pause();
             } else video.pause();
         });
     }
