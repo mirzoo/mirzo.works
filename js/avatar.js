@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     var button = document.createElement('button');
     button.type = 'button';
     button.className = 'intro__avatar-button';
-    button.setAttribute('aria-label', 'React');
+    button.setAttribute('aria-label', 'Avatar: click to see a reaction');
     button.appendChild(avatar);
     image.replaceWith(button);
 
