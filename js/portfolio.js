@@ -44,6 +44,23 @@ document.addEventListener('DOMContentLoaded', function () {
         preview.classList.add('is-visible');
     }
 
+    // On touch / narrow screens, tapping a work item reveals the same image the desktop hover preview shows.
+    work.querySelectorAll('[data-preview]').forEach(function (item) {
+        var source = preview.querySelector('[data-preview-image="' + item.dataset.preview + '"]');
+        if (!source) return;
+        var inline = document.createElement('div');
+        inline.className = 'work-index__preview';
+        var image = document.createElement('img');
+        image.src = source.getAttribute('src');
+        image.width = source.width;
+        image.height = source.height;
+        image.alt = item.querySelector('.work-index__title').textContent;
+        image.loading = 'lazy';
+        image.decoding = 'async';
+        inline.appendChild(image);
+        item.querySelector('.work-index__detail').prepend(inline);
+    });
+
     work.querySelectorAll('[data-preview]').forEach(function (item) {
         var summary = item.querySelector('summary');
         summary.addEventListener('pointerenter', function () { showPreview(item, summary); });
